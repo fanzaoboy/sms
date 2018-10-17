@@ -1,6 +1,6 @@
 body
 {
-	background-color: #F2F2F2
+	background-image:url(/photo/sea.jpg);
 }
 h1
 {
@@ -15,5 +15,18 @@ h1
 }
 p
 {
+	text-align: center;
 	font-family: Hannotate SC;
+}
+#bs-body
+{
+	width:100%;
+	height:100%;
+}
+#bs-login
+{
+	width:200px;
+	height:200px;
+	margin-left: 200px;
+	margin-top: 200px;
 }
