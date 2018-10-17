@@ -8,7 +8,7 @@
 </head>
 <body>
 shouye
-
+<img src="photo/sea.jpg">
 
 </body>
 </html>
