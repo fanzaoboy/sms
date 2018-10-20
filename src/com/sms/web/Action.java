@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sms.DAO.UserInfoDAO;
 import com.sms.DAOImpl.UserInfoDAOImpl;
+import com.sms.beans.UserInfo;
 
 public class Action extends HttpServlet {
 
@@ -30,11 +31,16 @@ public class Action extends HttpServlet {
 		UserInfoDAO userInfo = new UserInfoDAOImpl();
 		// 判断请求
 		if (path.equals("/login")) {
-			String username = request.getParameter("username");
-			String password = request.getParameter("password");
-			System.out.println(username + " " + password);
-			boolean flag = userInfo.userLogin(username, password);
+			//获取文本框输入的用户名密码
+			String userName = request.getParameter("username");
+			String passWord = request.getParameter("password");
+			UserInfo user = new UserInfo(userName);
+			//判断数据库是否存在该用户
+			boolean flag = userInfo.userLogin(userName, passWord);
+			//是 -> 重定向到首页；
+			//否 -> 重定向到注册页面；
 			if (flag == true) {
+				request.getSession().setAttribute("user", user);
 				response.sendRedirect("homePage.jsp");
 			} else {
 				response.sendRedirect("userRegister.jsp");
@@ -42,8 +48,11 @@ public class Action extends HttpServlet {
 		} else if (path.equals("/userAdd")) {
 			String username = request.getParameter("userName");
 			String password = request.getParameter("password");
-			System.out.println(username + " " + password);
 			userInfo.userAdd(username, password);
+			
+			UserInfo usName = new UserInfo(username);
+			System.out.println(usName.getUserName());
+			request.getSession().setAttribute("user", usName);
 			response.sendRedirect("homePage.jsp");
 		}
 	}
