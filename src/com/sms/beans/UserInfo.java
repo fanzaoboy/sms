@@ -63,5 +63,11 @@ public class UserInfo {
 		this.userPasswd = userPasswd;
 		this.stateId = stateId;
 	}
+
+	public UserInfo(String userName) {
+		super();
+		this.userName = userName;
+	}
+	
 	
 }
