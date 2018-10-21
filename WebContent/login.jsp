@@ -5,11 +5,10 @@
 <head>
 	<title>烦躁boy的vblog</title>
 	<meta http-equiv="Content-Type" content="text/html">
-	<link rel="stylesheet" type="text/css" href="http://localhost:8080/StuManaSystem/css/globalstyle.css">
+	<link rel="stylesheet" href="css/globalstyle.css" type="text/css" />
 </head>
 <body>
 	<div id="bs-body">
-	<img src="photo/sea.jpg">
 		<div id="bs-login">
 		<h1>欢迎登陆学生管理系统</h1>
 		<form method="post" action="login.do">
