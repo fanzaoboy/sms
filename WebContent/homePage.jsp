@@ -8,6 +8,8 @@
 <title>homePage</title>
 </head>
 <body>
+<div ></div>
+<img src="photo/web_icon.png">
 <% 
 UserInfo user = (UserInfo) session.getAttribute("user");
 %>
