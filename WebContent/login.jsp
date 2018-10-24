@@ -9,9 +9,11 @@
 </head>
 <body>
 	<div id="bs-body">
-	<h1>欢迎登陆学生管理系统</h1>
 		<div class="icon">
-		<img src="photo/web_icon.png">
+			<img src="photo/web_icon.png" height="65px" width="65px">
+		</div>
+		<div class="auth-form-header">
+			<h1>Sign in to SMS</h1>
 		</div>
 		<div id="bs-login">
 		<form method="post" action="login.do">
