@@ -23,7 +23,6 @@ public class Action extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		// 获取请求完整路径
 		String url = request.getRequestURI();
-		System.out.println(url);
 		// 截取请求
 		String path = url.substring(url.lastIndexOf("/"), url.lastIndexOf("."));
 		System.out.println("path:" + path);
@@ -32,14 +31,15 @@ public class Action extends HttpServlet {
 		// 判断请求
 		if (path.equals("/login")) {
 			//获取文本框输入的用户名密码
-			String userName = request.getParameter("username");
-			String passWord = request.getParameter("password");
-			UserInfo user = new UserInfo(userName);
+			String userId = request.getParameter("userId");
+			String passWord = request.getParameter("passWord");
 			//判断数据库是否存在该用户
-			boolean flag = userInfo.userLogin(userName, passWord);
+			boolean flag = userInfo.userLogin(userId, passWord);
 			//是 -> 重定向到首页；
 			//否 -> 重定向到注册页面；
-			if (flag == true) {
+			if (flag) {
+				String userName = userInfo.findUserNameById(userId);
+				UserInfo user = new UserInfo(userName);
 				request.getSession().setAttribute("user", user);
 				response.sendRedirect("homePage.jsp");
 			} else {

@@ -2,6 +2,9 @@ package com.sms.Utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DBUtil {
 
@@ -9,6 +12,7 @@ public class DBUtil {
 	private static String user = "root";
 	private static String password = "root";
 
+	//获取Connection对象
 	public static Connection getConn() {
 		Connection conn = null;
 		try {
@@ -16,11 +20,35 @@ public class DBUtil {
 			System.out.println("MySQL Driver Load Success!");
 			conn = DriverManager.getConnection(url, user, password);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return conn;
-
+	}
+	
+	//有结果集的关闭
+	public static void close(Connection conn,PreparedStatement ps,ResultSet res) {
+		if(conn != null && ps != null && res != null) {
+			try {
+				conn.close();
+				ps.close();
+				res.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+		}
+	}
+	
+	//没有结果集的关闭
+	public static void close(Connection conn,PreparedStatement ps) {
+		if(conn != null && ps != null) {
+			try {
+				conn.close();
+				ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+		}
 	}
 }

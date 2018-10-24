@@ -30,4 +30,10 @@ public interface UserInfoDAO {
 	
 	public void userUpdateState(String userId,String stateId);
 	
+	/**
+	 * @author foton
+	 * @desc use userId look for userName
+	 */
+	
+	public String findUserNameById(String userId);
 }

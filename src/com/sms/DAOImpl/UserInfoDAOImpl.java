@@ -17,7 +17,7 @@ public class UserInfoDAOImpl implements UserInfoDAO {
 		if (userId == null || userId.equals("") || password == null || password.equals("")) {
 			return false;
 		}
-		
+
 		Connection conn = DBUtil.getConn();
 		String sql = "select * from authuser where userId = ? and userPasswd = ?";
 		PreparedStatement ps = null;
@@ -27,11 +27,13 @@ public class UserInfoDAOImpl implements UserInfoDAO {
 			ps.setString(1, userId);
 			ps.setString(2, password);
 			res = ps.executeQuery();
-			if(res.next()) {
+			if (res.next()) {
 				return true;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn, ps, res);
 		}
 
 		return false;
@@ -40,29 +42,31 @@ public class UserInfoDAOImpl implements UserInfoDAO {
 
 	@Override
 	public void userAdd(String userName, String password) {
-		
+
 		if (userName == null || userName.equals("") || password == null || password.equals("")) {
 			System.out.println("用户名或密码不能为空");
 		}
 		String userId = IDUtil.RandomNum();
 		String sql = "insert into authuser values (?,?,?,?)";
-		
+
 		Connection conn = DBUtil.getConn();
 		PreparedStatement ps = null;
-		
+
 		try {
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, userId);
 			ps.setString(2, userName);
 			ps.setString(3, password);
 			ps.setString(4, "1");
-			
+
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			DBUtil.close(conn, ps);
 		}
-		
+
 	}
 
 	@Override
@@ -75,6 +79,36 @@ public class UserInfoDAOImpl implements UserInfoDAO {
 	public void userUpdateState(String userId, String stateId) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public String findUserNameById(String userId) {
+		if (userId == null || userId.equals("")) {
+			System.err.println("用户Id不能为空");
+		}
+
+		String sql = "select username from authuser where userid = ?";
+
+		Connection conn = DBUtil.getConn();
+		PreparedStatement ps = null;
+		ResultSet res = null;
+		String userName = null;
+
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, userId);
+
+			res = ps.executeQuery();
+			while (res.next()) {
+				userName = res.getString(1);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			DBUtil.close(conn, ps, res);
+		}
+		return userName;
 	}
 
 }
