@@ -16,10 +16,13 @@
 			<h1>Sign in to SMS</h1>
 		</div>
 		<div id="bs-login">
-		<form method="post" action="login.do">
-			<p>用户名：<input type="text" name="userId"></p>
-			<p>密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" name="passWord"></p>
-			<input type="submit" name="login" value="登录">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="register" action="userAdd.do" value="注册">
+		<form method="post" action="">
+		<p class="ex1">Username or email address</p>
+		<label for="login_field">Username or email address</label>
+		<input type="text" name="userId" id="login_field">
+			<p><input type="text" name="userId"></p>
+			<p><input type="password" name="passWord"></p>
+			<input type="submit" name="login" value="登录" formaction="login.do">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="register" formaction="userAdd.do" value="zhuce">
 		</form>
 		</div>
 	</div>

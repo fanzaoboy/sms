@@ -38,11 +38,12 @@ p
 }
 #bs-login
 {
-	margin:0 auto;
+	margin: 0 auto;
 	text-align: center;
-	width:320px; 
-	height:350px;
-	border:1px solid #dcdedd;
+	width: 320px; 
+	height: 310px;
+	border: 1px solid #dcdedd;
+	border-radius: 25px;
 }
 .icon
 {
@@ -59,4 +60,8 @@ p
     text-shadow: none;
     background-color: initial;
     border: 0;
+}
+p.ex1
+{
+	font: Arial 125%;
 }
