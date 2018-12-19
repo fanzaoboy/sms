@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.sms.beans.*" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,10 +15,11 @@
 		<link rel="stylesheet" href="../assets/css/page/typography.css" />
 	</head>
 	<body>
+	<% UserInfo user = (UserInfo) session.getAttribute("user");%>
 		<!-- Begin page -->
 		<header class="am-topbar am-topbar-fixed-top">		
 			<div class="am-topbar-left am-hide-sm-only">
-                <a href="index.html" class="logo"><span>Admin<span>to</span></span><i class="zmdi zmdi-layers"></i></a>
+                <a href="index.html" class="logo"><span><%= user.getUserName() %></span><i class="zmdi zmdi-layers"></i></a>
             </div>
 	
 			<div class="contain">
@@ -63,7 +66,7 @@
 	                            </li>
 	
 	                            <li>
-	                                <a href="#" class="text-custom">
+	                                <a href="logout.do" class="text-custom">
 	                                    <i class="am-icon-cog" aria-hidden="true"></i>
 	                                </a>
 	                            </li>
@@ -72,11 +75,11 @@
 	                    <!-- End User -->
 	            
 						 <ul class="am-list admin-sidebar-list">
-						    <li><a href="../index.html"><span class="am-icon-home"></span> 首页</a></li>
+						    <li><a href="chart_columnar.jsp"><span class="am-icon-home"></span>首页</a></li>
 						    <li class="admin-parent">
 						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-table"></span> 表格 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
 						      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav1">
-						        <li><a href="table_basic.html" class="am-cf"> 基本表格</span></a></li>
+						        <li><a href="html/table_basic.html" class="am-cf"> 基本表格 </span></a></li>
 						        <li><a href="table_complete.html">完整表格</a></li>
 						      </ul>
 						    </li>
@@ -89,10 +92,10 @@
 						      </ul>
 						    </li>
 						    <li class="admin-parent">
-						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav5'}"><span class="am-icon-file"></span> 表单 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav5'}"><span class="am-icon-file"></span> 表单 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
 						      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav5">
 						        <li><a href="form_basic.html" class="am-cf"> 基本表单</a></li>
-						        <li><a href="form_validate.html">表单验证</a></li>   
+						        <li><a href="form_validate.html">表单验证</a></li>   
 						      </ul>
 						    </li>
 						  </ul>
@@ -115,14 +118,14 @@
 			<div class="content">
 				<div class="am-g">
 					<div class="am-u-md-6" >
-						<!-- 折线图堆叠 -->
+						<!-- æçº¿å¾å å  -->
 						<div class="card-box">
 							<div  id="columnar1" style="width: 100%;height: 400px;"></div>
 						</div>
 					</div>
 					
 					<div class="am-u-md-6">
-						<!-- 堆叠区域图  -->
+						<!-- å å åºåå¾  -->
 						<div class="card-box">
 							<div  id="columnar2" style="width: 100%;height: 400px;"></div>
 						</div>
@@ -138,7 +141,7 @@
 					</div>
 					
 					<div class="am-u-md-6">
-						<!-- 大数据面积图  -->
+						<!-- å¤§æ°æ®é¢ç§¯å¾  -->
 						<div class="card-box">
 							<div  id="columnar4" style="width: 100%;height: 400px;"></div>
 						</div>

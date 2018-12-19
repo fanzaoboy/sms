@@ -1,9 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>后台模板</title>
+		<title>åå°æ¨¡æ¿</title>
 		<link rel="stylesheet" href="../assets/css/amazeui.css" />
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../assets/css/core.css" />
@@ -22,7 +23,7 @@
 			<div class="contain">
 				<ul class="am-nav am-navbar-nav am-navbar-left">
 
-					<li><h4 class="page-title">折线图</h4></li>
+					<li><h4 class="page-title">æçº¿å¾</h4></li>
 				</ul>
 				
 				<ul class="am-nav am-navbar-nav am-navbar-right">
@@ -72,27 +73,27 @@
 	                    <!-- End User -->
 	            
 						 <ul class="am-list admin-sidebar-list">
-						    <li><a href="../index.html"><span class="am-icon-home"></span> 首页</a></li>
+						    <li><a href="../index.html"><span class="am-icon-home"></span> é¦é¡µ</a></li>
 						    <li class="admin-parent">
-						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-table"></span> 表格 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-table"></span> è¡¨æ ¼ <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
 						      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav1">
-						        <li><a href="table_basic.html" class="am-cf"> 基本表格</span></a></li>
-						        <li><a href="table_complete.html">完整表格</a></li>
+						        <li><a href="table_basic.html" class="am-cf"> åºæ¬è¡¨æ ¼</span></a></li>
+						        <li><a href="table_complete.html">å®æ´è¡¨æ ¼</a></li>
 						      </ul>
 						    </li>
 						    <li class="admin-parent">
-						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav2'}"><i class="am-icon-line-chart" aria-hidden="true"></i> 统计图表 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav2'}"><i class="am-icon-line-chart" aria-hidden="true"></i> ç»è®¡å¾è¡¨ <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
 						      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav2">
-						        <li><a href="chart_line.html" class="am-cf"> 折线图</span></a></li>
-						        <li><a href="chart_columnar.html" class="am-cf"> 柱状图</span></a></li>
-						        <li><a href="chart_pie.html" class="am-cf"> 饼状图</span></a></li>
+						        <li><a href="chart_line.html" class="am-cf"> æçº¿å¾</span></a></li>
+						        <li><a href="chart_columnar.html" class="am-cf"> æ±ç¶å¾</span></a></li>
+						        <li><a href="chart_pie.html" class="am-cf"> é¥¼ç¶å¾</span></a></li>
 						      </ul>
 						    </li>
 						    <li class="admin-parent">
-						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav5'}"><span class="am-icon-file"></span> 表单 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav5'}"><span class="am-icon-file"></span> è¡¨å <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
 						      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav5">
-						        <li><a href="form_basic.html" class="am-cf"> 基本表单</a></li>
-						        <li><a href="form_validate.html">表单验证</a></li>   
+						        <li><a href="form_basic.html" class="am-cf"> åºæ¬è¡¨å</a></li>
+						        <li><a href="form_validate.html">è¡¨åéªè¯</a></li>   
 						      </ul>
 						    </li>
 						  </ul>
@@ -115,14 +116,14 @@
 			<div class="content">
 				<div class="am-g">
 					<div class="am-u-md-6" >
-						<!-- 折线图堆叠 -->
+						<!-- æçº¿å¾å å  -->
 						<div class="card-box">
 							<div  id="Stack" style="width: 100%;height: 250px;"></div>
 						</div>
 					</div>
 					
 					<div class="am-u-md-6">
-						<!-- 堆叠区域图  -->
+						<!-- å å åºåå¾  -->
 						<div class="card-box">
 							<div  id="area" style="width: 100%;height: 250px;"></div>
 						</div>
@@ -138,7 +139,7 @@
 					</div>
 					
 					<div class="am-u-md-6">
-						<!-- 大数据面积图  -->
+						<!-- å¤§æ°æ®é¢ç§¯å¾  -->
 						<div class="card-box">
 							<div  id="shuju" style="width: 100%;height: 250px;"></div>
 						</div>
@@ -147,7 +148,7 @@
 				
 				<div class="am-g">
 					<div class="am-u-md-12">
-						<!-- 动态数据+时间坐标轴 -->
+						<!-- å¨ææ°æ®+æ¶é´åæ è½´ -->
 						<div class="card-box">
 							<div  id="trends" style="width: 100%;height: 300px;"></div>
 						</div>
