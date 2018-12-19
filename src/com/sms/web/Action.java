@@ -41,9 +41,9 @@ public class Action extends HttpServlet {
 				String userName = userInfo.findUserNameById(userId);
 				UserInfo user = new UserInfo(userName);
 				request.getSession().setAttribute("user", user);
-				response.sendRedirect("homePage.jsp");
+				response.sendRedirect("chart_columnar.jsp");
 			} else {
-				response.sendRedirect("userRegister.jsp");
+				response.sendRedirect("form_validate.jsp");
 			}
 		} else if (path.equals("/logout")) {
 			request.getSession().removeAttribute("user");
