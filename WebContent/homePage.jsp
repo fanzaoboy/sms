@@ -12,5 +12,6 @@
 UserInfo user = (UserInfo) session.getAttribute("user");
 %>
 你好，<%= user.getUserName() %>
+<a href="logout.do">[注销]</a>
 </body>
 </html>

@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>烦躁boy的vblog</title>
+	<title>Sign in to SMS</title>
 	<meta http-equiv="Content-Type" content="text/html">
 	<link rel="stylesheet" href="css/globalstyle.css" type="text/css" />
+	<link rel="icon" href="photo/web_icon.png" type="image/x-icon" />
 </head>
 <body>
 	<div id="bs-body">
@@ -17,12 +18,17 @@
 		</div>
 		<div id="bs-login">
 		<form method="post" action="">
+			<div class="auth-form-body mt-3">
+				<div class="login_field">Username or email address</div>
+		
+			</div>
 		<p class="ex1">Username or email address</p>
-		<label for="login_field">Username or email address</label>
-		<input type="text" name="userId" id="login_field">
+		<br>
 			<p><input type="text" name="userId"></p>
+		<br>
 			<p><input type="password" name="passWord"></p>
-			<input type="submit" name="login" value="登录" formaction="login.do">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="register" formaction="userAdd.do" value="zhuce">
+		<br>
+			<input type="submit" name="login" value="登录" formaction="login.do">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="register" formaction="userAdd.do" value="注册">
 		</form>
 		</div>
 	</div>

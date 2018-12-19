@@ -45,6 +45,9 @@ public class Action extends HttpServlet {
 			} else {
 				response.sendRedirect("userRegister.jsp");
 			}
+		} else if (path.equals("/logout")) {
+			request.getSession().removeAttribute("user");
+			response.sendRedirect("login.jsp");
 		} else if (path.equals("/userAdd")) {
 			String username = request.getParameter("userName");
 			String password = request.getParameter("password");

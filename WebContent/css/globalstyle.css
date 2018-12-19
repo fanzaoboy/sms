@@ -32,18 +32,24 @@ p
 }
 #bs-body
 {
-	text-align: center;
 	width:1349px;
 	height:630px;
 }
 #bs-login
 {
 	margin: 0 auto;
-	text-align: center;
 	width: 320px; 
 	height: 310px;
 	border: 1px solid #dcdedd;
-	border-radius: 25px;
+	border-radius: 5px;
+}
+#login_field
+{
+	margin: 0 auto;
+	width: 20px; 
+	height: 10px;
+	border: 1px solid #dcdedd;
+	border-radius: 5px;
 }
 .icon
 {
