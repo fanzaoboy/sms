@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>åå°æ¨¡æ¿</title>
+		<title>用户注册</title>
 		<link rel="stylesheet" href="../assets/css/amazeui.css" />
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../assets/css/core.css" />
@@ -24,7 +24,7 @@
 			<div class="contain">
 				<ul class="am-nav am-navbar-nav am-navbar-left">
 
-					<li><h4 class="page-title">è¡¨åéªè¯</h4></li>
+					<li><h4 class="page-title">用户注册</h4></li>
 				</ul>
 				
 				<ul class="am-nav am-navbar-nav am-navbar-right">
@@ -74,27 +74,27 @@
 	                    <!-- End User -->
 	            
 						 <ul class="am-list admin-sidebar-list">
-						    <li><a href="../index.html"><span class="am-icon-home"></span> é¦é¡µ</a></li>
+						    <li><a href="../index.html"><span class="am-icon-home"></span> 首页</a></li>
 						    <li class="admin-parent">
-						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-table"></span> è¡¨æ ¼ <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav1'}"><span class="am-icon-table"></span> 表格 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
 						      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav1">
-						        <li><a href="table_basic.html" class="am-cf"> åºæ¬è¡¨æ ¼</span></a></li>
-						        <li><a href="table_complete.html">å®æ´è¡¨æ ¼</a></li>
+						        <li><a href="table_basic.html" class="am-cf"> 基本表格</span></a></li>
+						        <li><a href="table_complete.html">完整表格</a></li>
 						      </ul>
 						    </li>
 						    <li class="admin-parent">
-						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav2'}"><i class="am-icon-line-chart" aria-hidden="true"></i> ç»è®¡å¾è¡¨ <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav2'}"><i class="am-icon-line-chart" aria-hidden="true"></i> 统计图表 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
 						      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav2">
-						        <li><a href="chart_line.html" class="am-cf"> æçº¿å¾</span></a></li>
-						        <li><a href="chart_columnar.html" class="am-cf"> æ±ç¶å¾</span></a></li>
-						        <li><a href="chart_pie.html" class="am-cf"> é¥¼ç¶å¾</span></a></li>
+						        <li><a href="chart_line.html" class="am-cf"> 折线图</span></a></li>
+						        <li><a href="chart_columnar.html" class="am-cf"> 柱状图</span></a></li>
+						        <li><a href="chart_pie.html" class="am-cf"> 饼状图</span></a></li>
 						      </ul>
 						    </li>
 						    <li class="admin-parent">
-						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav5'}"><span class="am-icon-file"></span> è¡¨å <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+						      <a class="am-cf" data-am-collapse="{target: '#collapse-nav5'}"><span class="am-icon-file"></span> 表单 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
 						      <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav5">
-						        <li><a href="form_basic.html" class="am-cf"> åºæ¬è¡¨å</a></li>
-						        <li><a href="form_validate.html">è¡¨åéªè¯</a></li>   
+						        <li><a href="form_basic.html" class="am-cf"> 基本表单</a></li>
+						        <li><a href="form_validate.html">表单验证</a></li>   
 						      </ul>
 						    </li>
 						  </ul>
@@ -135,72 +135,72 @@
 								
 								<form action="" class="am-form" data-am-validator>
 								  <fieldset>
-								    <legend>JS è¡¨åéªè¯</legend>
+								    <legend>填写信息</legend>
 								    <div class="am-form-group">
-								      <label for="doc-vld-name-2">ç¨æ·åï¼</label>
-								      <input type="text" id="doc-vld-name-2" minlength="3" placeholder="è¾å¥ç¨æ·åï¼è³å° 3 ä¸ªå­ç¬¦ï¼" required/>
+								      <label for="doc-vld-name-2">用户名：</label>
+								      <input type="text" id="doc-vld-name-2" minlength="3" placeholder="输入用户名（至少 3 个字符）" required/>
 								    </div>
 								
 								    <div class="am-form-group">
-								      <label for="doc-vld-email-2">é®ç®±ï¼</label>
-								      <input type="email" id="doc-vld-email-2" placeholder="è¾å¥é®ç®±" required/>
+								      <label for="doc-vld-email-2">邮箱：</label>
+								      <input type="email" id="doc-vld-email-2" placeholder="输入邮箱" required/>
+								    </div>
+								 
+								    <div class="am-form-group">
+								      <label for="doc-vld-url-2">网址：</label>
+								      <input type="url" id="doc-vld-url-2" placeholder="输入网址" required/>
 								    </div>
 								
 								    <div class="am-form-group">
-								      <label for="doc-vld-url-2">ç½åï¼</label>
-								      <input type="url" id="doc-vld-url-2" placeholder="è¾å¥ç½å" required/>
+								      <label for="doc-vld-age-2">年龄：</label>
+								      <input type="number" class=""  id="doc-vld-age-2" placeholder="输入年龄  18-120" min="18" max="120" required />
 								    </div>
 								
 								    <div class="am-form-group">
-								      <label for="doc-vld-age-2">å¹´é¾ï¼</label>
-								      <input type="number" class=""  id="doc-vld-age-2" placeholder="è¾å¥å¹´é¾  18-120" min="18" max="120" required />
-								    </div>
-								
-								    <div class="am-form-group">
-								      <label class="am-form-label">ç±å¥½ï¼</label>
+								      <label class="am-form-label">爱好：</label>
 								      <label class="am-checkbox-inline">
-								        <input type="checkbox" value="æ©å­" name="docVlCb" minchecked="2" maxchecked="4" required> æ©å­
+								        <input type="checkbox" value="橘子" name="docVlCb" minchecked="2" maxchecked="4" required> 橘子
 								      </label>
 								      <label class="am-checkbox-inline">
-								        <input type="checkbox" value="è¹æ" name="docVlCb"> è¹æ
+								        <input type="checkbox" value="苹果" name="docVlCb"> 苹果
 								      </label>
 								      <label class="am-checkbox-inline">
-								        <input type="checkbox" value="è è" name="docVlCb"> è è
+								        <input type="checkbox" value="菠萝" name="docVlCb"> 菠萝
 								      </label>
 								      <label class="am-checkbox-inline">
-								        <input type="checkbox" value="èæ" name="docVlCb"> èæ
+								        <input type="checkbox" value="芒果" name="docVlCb"> 芒果
 								      </label>
 								      <label class="am-checkbox-inline">
-								        <input type="checkbox" value="é¦è" name="docVlCb"> é¦è
+								        <input type="checkbox" value="香蕉" name="docVlCb"> 香蕉
 								      </label>
 								    </div>
 								
 								    <div class="am-form-group">
-								      <label>æ§å«ï¼ </label>
+								      <label>性别： </label>
 								      <label class="am-radio-inline">
-								        <input type="radio"  value="" name="docVlGender" required> ç·
-								      </label>
-								      <label class="am-radio-inline">
-								        <input type="radio" name="docVlGender"> å¥³
+								        <input type="radio"  value="" name="docVlGender" required> 男
 								      </label>
 								      <label class="am-radio-inline">
-								        <input type="radio" name="docVlGender"> å¶ä»
+								        <input type="radio" name="docVlGender"> 女
+								      </label>
+								      <label class="am-radio-inline">
+								        <input type="radio" name="docVlGender"> 其他
 								      </label>
 								    </div>
 								
 								    <div class="am-form-group">
-								      <label for="doc-select-1">ä¸æåéæ¡</label>
+								      <label for="doc-select-1">下拉单选框</label>
 								      <select id="doc-select-1" required>
-								        <option value="">-=è¯·éæ©ä¸é¡¹=-</option>
-								        <option value="option1">éé¡¹ä¸...</option>
-								        <option value="option2">éé¡¹äº.....</option>
-								        <option value="option3">éé¡¹ä¸........</option>
+								        <option value="">-=请选择一项=-</option>
+								        <option value="option1">选项一...</option>
+								        <option value="option2">选项二.....</option>
+								        <option value="option3">选项三........</option>
 								      </select>
 								      <span class="am-form-caret"></span>
 								    </div>
 								
 								    <div class="am-form-group">
-								      <label for="doc-select-2">å¤éæ¡</label>
+								      <label for="doc-select-2">多选框</label>
 								      <select multiple class="" id="doc-select-2" minchecked="2" maxchecked="4">
 								        <option>1</option>
 								        <option>2</option>
@@ -211,11 +211,11 @@
 								    </div>
 								
 								    <div class="am-form-group">
-								      <label for="doc-vld-ta-2">è¯è®ºï¼</label>
+								      <label for="doc-vld-ta-2">评论：</label>
 								      <textarea id="doc-vld-ta-2" minlength="10" maxlength="100"></textarea>
 								    </div>
 								
-								    <button class="am-btn am-btn-secondary" type="submit">æäº¤</button>
+								    <button class="am-btn am-btn-secondary" type="submit">提交</button>
 								  </fieldset>
 								</form>
 								
