@@ -1,0 +1,14 @@
+create table user_member_base
+(
+member_name varchar(64),
+gender_id varchar(8),
+mobile_no varchar(11),
+e_mail varchar(32),
+city_name varchar(40),
+state_id varchar(8),
+remark varchar(256),
+created_by varchar(32),
+created_time timestamp,
+edit_by varchar(32),
+edit_time timestamp
+)
