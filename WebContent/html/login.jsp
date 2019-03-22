@@ -26,7 +26,7 @@
 	                	<form class="am-form" method="post" action="">
 	                		<div class="am-g">
 	                			<div class="am-form-group">
-							      <input type="email" class="am-radius"  placeholder="Username" name="userId">
+							      <input type="text" class="am-radius"  placeholder="Username" name="userId">
 							    </div>
 							
 							    <div class="am-form-group form-horizontal m-t-20">
