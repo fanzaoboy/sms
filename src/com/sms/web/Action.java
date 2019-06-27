@@ -1,6 +1,7 @@
 package com.sms.web;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,8 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+import com.sms.DAO.BrandInfoDAO;
 import com.sms.DAO.UserInfoDAO;
+import com.sms.DAOImpl.BrandInfoDAOImpl;
 import com.sms.DAOImpl.UserInfoDAOImpl;
+import com.sms.beans.BrandInfo;
 import com.sms.beans.UserInfo;
 
 public class Action extends HttpServlet {
@@ -32,6 +36,7 @@ public class Action extends HttpServlet {
 		logger.info("请求为：" + path);
 		// 创建user实例
 		UserInfoDAO userInfo = new UserInfoDAOImpl();
+		BrandInfoDAO brandInfo = new BrandInfoDAOImpl();
 		// 判断请求
 		if (path.equals("/login")) {
 			// 获取文本框输入的用户名密码
@@ -49,7 +54,7 @@ public class Action extends HttpServlet {
 					String userName = userInfo.findUserNameById(userId);
 					UserInfo user = new UserInfo(userName);
 					request.getSession().setAttribute("user", user);
-					response.sendRedirect("index.html");
+					response.sendRedirect("homePage.jsp");
 				} else {
 					logger.error("用户[" + userId + "]密码错误！");
 					response.sendRedirect("login.jsp");
@@ -71,6 +76,10 @@ public class Action extends HttpServlet {
 			System.out.println(usName.getUserName());
 			request.getSession().setAttribute("user", usName);
 			response.sendRedirect("homePage.jsp");
+		} else if (path.equals("/productList")) {
+			List<BrandInfo> brandList = brandInfo.findAll();
+			request.getSession().setAttribute("brandList", brandList);
+			response.sendRedirect("/productList.jsp");
 		}
 	}
 

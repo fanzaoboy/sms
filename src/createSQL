@@ -1,14 +1,49 @@
-create table user_member_base
-(
-member_name varchar(64),
-gender_id varchar(8),
-mobile_no varchar(11),
-e_mail varchar(32),
-city_name varchar(40),
-state_id varchar(8),
-remark varchar(256),
-created_by varchar(32),
-created_time timestamp,
-edit_by varchar(32),
-edit_time timestamp
-)
+CREATE TABLE `dim_brand` (
+  `brand_id` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `simple_brand_id` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL,
+  `fir_brand_name` varchar(40) COLLATE utf8mb4_bin DEFAULT NULL,
+  `sec_brand_name` varchar(20) COLLATE utf8mb4_bin DEFAULT NULL,
+  `brand_type_id` varchar(20) COLLATE utf8mb4_bin DEFAULT NULL,
+  `brand_dept_id` varchar(20) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`brand_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('LOXA-QZJ', 'QZJ', '重机', '雷萨搅拌车', NULL, '4100001');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('LOXA-BS', 'BS', '重机', '雷萨泵送', NULL, '4100001');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('AUV', 'OV', '客车', '欧辉', NULL, '4100002');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('XG', 'XG', '竞品重卡', '徐工', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('BB', 'BB', '竞品重卡', '北奔', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('BENZ', 'BENZ', '进口重卡', '奔驰', '进口', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('CQ', 'CQ', '竞品重卡', '常奇', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('CS', 'CS', '竞品重卡', '楚胜', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('DFAC', 'DFAC', '竞品重卡', '东风', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('DFLQ', 'DFLQ', '竞品重卡', '东风柳汽', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('DY', 'DY', '竞品重卡', '大运', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('ZQ', 'ZQ', '竞品重卡', '重汽', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('HL', 'HL', '竞品重卡', '华菱', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('HY', 'HY', '竞品重卡', '上汽红岩', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('IVECO', 'IVECO', '进口重卡', '依维柯', '进口', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('JAC', 'JAC', '竞品重卡', '江淮', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('JF', 'JF', '竞品重卡', '解放', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('JRLH', 'JRLH', '竞品重卡', '集瑞联合', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('AUMAN', 'OM', '重卡', '欧曼', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('MANN', 'MANN', '进口重卡', '曼恩', '进口', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('RENAULT', 'RENAULT', '进口重卡', '雷诺', '进口', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('SCANIA', 'SCANIA', '进口重卡', '斯堪尼亚', '进口', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('SQ', 'SQ', '竞品重卡', '陕汽', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('SY', 'SY', '竞品重卡', '三一', '国产', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('VOLVO', 'VOLVO', '进口重卡', '沃尔沃', '进口', '4100003');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('AUMARK', 'OMK', '轻型车', '欧马可', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('FORLAND', 'SD', '轻型车', '时代', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('SAUVANA', 'SWN', '轻型车', '萨瓦纳', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('MIDI', 'MID', '轻型车', '迷迪', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('MP-X', 'MPX', '轻型车', '蒙派克', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('SUP', 'SP', '轻型车', '萨普', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('OLLIN', 'OL', '轻型车', '奥铃', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('TOANO', 'TYN', '轻型车', '图雅诺', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('TUNLAND', 'TLZ', '轻型车', '拓路者', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('VIEW', 'FJ', '轻型车', '风景', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('FORLAND-JG', 'SD-JG', '轻型车', '时代金刚', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('GRATOUR', 'GT', '轻型车', '伽途', NULL, '4100004');
+INSERT INTO `app`.`dim_brand` (`brand_id`, `simple_brand_id`, `fir_brand_name`, `sec_brand_name`, `brand_type_id`, `brand_dept_id`) VALUES ('ROWOR', 'RW', '轻型车', '瑞沃', NULL, '4100004');
