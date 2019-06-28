@@ -29,7 +29,6 @@
 			<p><input type="password" name="passWord"></p>
 		<br>
 			<input type="submit" name="login" value="登录" formaction="login.do">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="register" formaction="userAdd.do" value="注册">
-			<input type="submit" name="productList" formaction="productList.do" value="产品列表">
 		</form>
 		</div>
 	</div>
