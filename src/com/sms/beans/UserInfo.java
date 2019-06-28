@@ -43,13 +43,6 @@ public class UserInfo {
 
 	}
 
-	public UserInfo(String userId, String userPasswd, String stateId) {
-		super();
-		this.userId = userId;
-		this.userPasswd = userPasswd;
-		this.stateId = stateId;
-	}
-
 	public UserInfo(String userId, String userPasswd) {
 		super();
 		this.userId = userId;
@@ -67,6 +60,13 @@ public class UserInfo {
 	public UserInfo(String userName) {
 		super();
 		this.userName = userName;
+	}
+
+	public UserInfo(String userId, String userName, String stateId) {
+		super();
+		this.userId = userId;
+		this.userName = userName;
+		this.stateId = stateId;
 	}
 	
 	

@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/global.css" type="text/css" />
 <title>homePage</title>
 </head>
 <body>
@@ -25,8 +26,8 @@ List<BrandInfo> brandLists = (List) session.getAttribute("brandList");
 for(int i=0; i< brandLists.size();i++){
 %>
 <tr>
-	<td><%= brandLists.get(i).getBrandId() %></td>
-	<td><%= brandLists.get(i).getSimpleBrandId() %></td>
+	<td class="one"><%= brandLists.get(i).getBrandId() %></td>
+	<td class="two"><%= brandLists.get(i).getSimpleBrandId() %></td>
 	<td><%= brandLists.get(i).getFirBrandName() %></td>
 	<td><%= brandLists.get(i).getSecBrandName() %></td>
 	<td><%= brandLists.get(i).getBrandTypeId() %></td>

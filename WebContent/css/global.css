@@ -1,0 +1,10 @@
+td.one
+{
+	border-style: solid;
+	border-width: 1px 1px 1px thin
+}
+td.two
+{
+	border-style: solid;
+	border-top-width: 1px
+}

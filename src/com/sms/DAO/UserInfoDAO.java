@@ -1,5 +1,9 @@
 package com.sms.DAO;
 
+import java.util.List;
+
+import com.sms.beans.UserInfo;
+
 public interface UserInfoDAO {
 
 	/**
@@ -36,4 +40,11 @@ public interface UserInfoDAO {
 	 */
 	
 	public String findUserNameById(String userId);
+	
+	/***
+	 * @author hd
+	 * @desc 查找全部
+	 */
+	
+	List<UserInfo> findAll();
 }

@@ -4,10 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.*;
 
 import com.sms.DAO.UserInfoDAO;
 import com.sms.Utils.DBUtil;
 import com.sms.Utils.IDUtil;
+import com.sms.beans.UserInfo;
 
 public class UserInfoDAOImpl implements UserInfoDAO {
 
@@ -109,6 +111,32 @@ public class UserInfoDAOImpl implements UserInfoDAO {
 			DBUtil.close(conn, ps, res);
 		}
 		return userName;
+	}
+
+	@Override
+	public List<UserInfo> findAll() {
+		Connection conn = DBUtil.getConn();
+		String sql = "select userid,username,stateid from authuser";
+		PreparedStatement ps = null;
+		ResultSet res = null;
+		List<UserInfo> userList = new ArrayList<UserInfo>();
+		try {
+			ps = conn.prepareStatement(sql);
+			res = ps.executeQuery();
+			while(res.next()) {
+				String userId = res.getString(1);
+				String userName = res.getString(2);
+				String stateId = res.getString(3);
+				UserInfo ui = new UserInfo(userId, userName, stateId);
+				userList.add(ui);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn, ps, res);
+		}
+		
+		return userList;
 	}
 
 }

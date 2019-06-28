@@ -54,6 +54,8 @@ public class Action extends HttpServlet {
 					String userName = userInfo.findUserNameById(userId);
 					UserInfo user = new UserInfo(userName);
 					request.getSession().setAttribute("user", user);
+					List<UserInfo> userList = userInfo.findAll();
+					request.getSession().setAttribute("userList", userList);
 					response.sendRedirect("homePage.jsp");
 				} else {
 					logger.error("用户[" + userId + "]密码错误！");
