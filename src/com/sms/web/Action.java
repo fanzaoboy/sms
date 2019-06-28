@@ -78,8 +78,9 @@ public class Action extends HttpServlet {
 			response.sendRedirect("homePage.jsp");
 		} else if (path.equals("/productList")) {
 			List<BrandInfo> brandList = brandInfo.findAll();
+			System.out.println(brandList.size());
 			request.getSession().setAttribute("brandList", brandList);
-			response.sendRedirect("/productList.jsp");
+			response.sendRedirect("productList.jsp");
 		}
 	}
 

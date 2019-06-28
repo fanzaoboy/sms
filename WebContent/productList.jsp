@@ -1,4 +1,4 @@
-<%@page import="com.sms.*" %>
+<%@page import="com.sms.beans.*,java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
@@ -8,12 +8,10 @@
 <title>homePage</title>
 </head>
 <body>
-<% 
-UserInfo user = (UserInfo) session.getAttribute("user");
-%>
-你好，<%= user.getUserName() %>
 <a href="logout.do">[注销]</a>
-
+<% 
+List<BrandInfo> brandLists = (List) session.getAttribute("brandList");
+%>
 <table border=1>
 <tr>
 	<td>品牌编码</td>
@@ -23,19 +21,17 @@ UserInfo user = (UserInfo) session.getAttribute("user");
 	<td>产品类型</td>
 	<td>所属业务</td>
 </tr>
-<%=request.getSession.getAttribute("brandList");%> 
-<%=	
-	for(brandList : brand) {
+<%
+for(int i=0; i< brandLists.size();i++){
 %>
 <tr>
-	<td><%=brand.getBrandId() %></td>
-	<td><%=brand.getBrandId() %></td>
-	<td><%=brand.getBrandId() %></td>
-	<td><%=brand.getBrandId() %></td>
-	<td><%=brand.getBrandId() %></td>
-	<td><%=brand.getBrandId() %></td>
+	<td><%= brandLists.get(i).getBrandId() %></td>
+	<td><%= brandLists.get(i).getSimpleBrandId() %></td>
+	<td><%= brandLists.get(i).getFirBrandName() %></td>
+	<td><%= brandLists.get(i).getSecBrandName() %></td>
+	<td><%= brandLists.get(i).getBrandTypeId() %></td>
+	<td><%= brandLists.get(i).getBrandDeptId() %></td>
 </tr>
-
 <%
 }
 %>
