@@ -61,7 +61,7 @@ public class Action extends HttpServlet {
 				}
 			} else {
 				logger.error("用户[" + userId + "]不存在！");
-				response.sendRedirect("form_validate.jsp");
+				response.sendRedirect("homePage.jsp");
 			}
 		} else if (path.equals("/logout")) {
 			UserInfo user = (UserInfo) request.getSession().getAttribute("user");

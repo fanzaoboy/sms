@@ -18,17 +18,14 @@
 		</div>
 		<div id="bs-login">
 		<form method="post" action="">
-			<div class="auth-form-body mt-3">
-				<div class="login_field">Username or email address</div>
-		
-			</div>
+
 		<p class="ex1">Username or email address</p>
 		<br>
 			<p><input type="text" name="userId"></p>
 		<br>
 			<p><input type="password" name="passWord"></p>
 		<br>
-			<input type="submit" name="login" value="登录" formaction="login.do">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="register" formaction="userAdd.do" value="注册">
+			<input type="submit" name="login" value="登录" formaction="login.do">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="register" formaction="/StuManaSystem/register.jsp" value="注册">
 		</form>
 		</div>
 	</div>
